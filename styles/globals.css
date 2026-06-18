@@ -1,0 +1,264 @@
+/*   ГЛОБАЛЬНЫЕ СТИЛИ - ЮВЕЛИРНЫЙ МАГАЗИН ЭДО  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1b1919;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Шапка сайта */
+.navbar { background-color: #1b1919 !important; }
+.logo-brand { width: 50px; height: auto; }
+.navbar-brand { font-weight: 700; font-size: 28px; color: #f0f0f0 !important; }
+.nav-link { font-weight: 500; color: #f0f0f0 !important; transition: color 0.3s; }
+.nav-link:hover { color: #c9a96e !important; }
+
+/* Кнопки */
+.btn-outline-dark, .btn-call { color: #fff; padding: 6px 18px; border-radius: 4px; font-weight: 500; transition: all 0.3s; }
+.btn-outline-dark:hover, .btn-call:hover { background-color: #c9a96e; color: #fff; border-color: #c9a96e; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(201,169,110,0.2); }
+.btn-primary { background-color: #c9a96e; border-color: #c9a96e; color: #000; }
+.btn-primary:hover { background-color: #b8963d; border-color: #b8963d; color: #000; }
+.btn-outline-primary { border-color: #c9a96e; color: #c9a96e; }
+.btn-outline-primary:hover { background-color: #c9a96e; border-color: #c9a96e; color: #000; }
+.btn-outline { color: #000; background-color: #fff !important; padding: 8px 20px; border-radius: 4px; text-decoration: none; display: inline-block; transition: all 0.3s; }
+.btn-outline:hover { background-color: #f0f0f0; color: #000; transform: translateY(-2px); }
+
+/* Hero секция с видео */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  margin-top: -76px;
+  padding-top: 76px;
+  overflow: hidden;
+  background-color: #1b1919;
+}
+.hero-video-wrapper { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+.hero-video { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; object-fit: cover; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 1; }
+.hero-section .container { position: relative; z-index: 2; }
+
+/* Секции */
+.section-title { margin-top: 100px; color: white; text-align: center; }
+.advantage-icon { font-size: 50px; color: #c9a96e; }
+
+/* Каталог */
+.catalog-grid { display: block; }
+.catalog-carousel { display: none; }
+.product-card { border-radius: 8px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; background-color: #252525; }
+.product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+.product-img { height: 220px; object-fit: cover; width: 100%; }
+.product-price { color: #c9a96e; font-weight: 600; font-size: 20px; }
+
+/* Прайс-лист */
+.price-table { width: 100%; border-collapse: collapse; }
+.price-table th, .price-table td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #444; }
+.price-table th { background-color: #1e1e1e; color: #f0f0f0; }
+.price-table td { color: #f0f0f0; background-color: #252525; }
+.mobile-price-list { display: none; }
+.price-card { background-color: #252525; border-radius: 8px; padding: 15px; margin-bottom: 15px; border: 1px solid #444; }
+.price-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; border-bottom: 1px solid #444; padding-bottom: 10px; }
+.price-card-title { color: #f0f0f0; font-size: 16px; margin: 0; }
+.price-card-price { color: #c9a96e; font-size: 18px; font-weight: 600; }
+.price-card-details { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px; }
+.detail-label { font-size: 12px; color: #aaa; }
+.detail-value { font-size: 14px; color: #f0f0f0; }
+.price-card-action { text-align: center; }
+.price-card-action .btn { width: 100%; }
+
+/* Формы */
+.form-container { background-color: #252525; border-radius: 8px; padding: 30px; border: 1px solid #444; }
+.form-control, .form-select { background-color: #1e1e1e; border: 1px solid #444; color: #f0f0f0; padding: 10px 15px; }
+.form-control:focus, .form-select:focus { background-color: #1e1e1e; border-color: #c9a96e; color: #f0f0f0; box-shadow: 0 0 5px rgba(201,169,110,0.3); }
+.form-label { color: #f0f0f0; margin-bottom: 8px; }
+.checkbox-group { background-color: #1e1e1e; border-radius: 8px; padding: 15px; margin-bottom: 20px; border: 1px solid #444; }
+.checkbox-group h6 { color: #f0f0f0; margin-bottom: 10px; }
+.form-check-label { color: #f0f0f0; }
+.form-check-input { background-color: #333; border-color: #555; }
+.form-check-input:checked { background-color: #c9a96e; border-color: #c9a96e; }
+textarea.form-control { resize: vertical; }
+
+/* Отзывы */
+.testimonial-slider { max-width: 800px; margin: 0 auto; }
+.testimonial-item { background-color: #252525; border-radius: 8px; padding: 30px; margin: 0 15px; border: 1px solid #444; }
+.testimonial-img { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 2px solid #c9a96e; }
+.testimonial-text { color: #f0f0f0; font-size: 14px; }
+.testimonial-date { color: #aaa; font-size: 13px; }
+
+/* Контакты */
+.contact-info { list-style: none; padding: 0; }
+.contact-info li { margin-bottom: 15px; display: flex; align-items: flex-start; }
+.contact-info i { color: #c9a96e; margin-right: 10px; margin-top: 5px; font-size: 20px; width: 25px; }
+.contact-info a { color: #c9a96e; }
+.map-container { border-radius: 8px; overflow: hidden; border: 1px solid #444; }
+
+/* Футер */
+footer { background-color: #0a0a0a; color: #f0f0f0; padding: 60px 0 30px; border-top: 1px solid #444; }
+.footer-links { list-style: none; padding: 0; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { color: #aaa; text-decoration: none; }
+.footer-links a:hover { color: #c9a96e; }
+.social-links a { display: inline-block; width: 40px; height: 40px; background: #1e1e1e; border-radius: 50%; text-align: center; line-height: 40px; margin-right: 10px; color: #f0f0f0; transition: all 0.3s; }
+.social-links a:hover { background: #c9a96e; color: #000; transform: translateY(-3px); }
+.copyright { border-top: 1px solid #444; margin-top: 30px; padding-top: 20px; color: #aaa; font-size: 13px; }
+
+/* Модальные окна */
+.modal-content { background-color: #252525; color: #f0f0f0; border: 1px solid #444; border-radius: 10px; }
+.modal-header { background-color: #1e1e1e; border-bottom: 1px solid #444; padding: 15px 20px; }
+.modal-title { color: #f0f0f0; font-size: 18px; }
+.modal-body { padding: 20px; }
+.btn-close { filter: invert(1); }
+
+/* Карусель */
+.carousel-control-prev, .carousel-control-next { width: 40px; height: 40px; background-color: rgba(201,169,110,0.5); border-radius: 50%; top: 50%; transform: translateY(-50%); }
+.carousel-control-prev:hover, .carousel-control-next:hover { background-color: #c9a96e; }
+.carousel-control-prev { left: -20px; }
+.carousel-control-next { right: -20px; }
+.carousel-indicators button { background-color: #c9a96e !important; width: 10px !important; height: 10px !important; border-radius: 50% !important; }
+
+a { color: #c9a96e; text-decoration: none; }
+
+/*   АДАПТИВНОСТЬ - Планшеты (992px и меньше)   */
+@media (max-width: 992px) {
+  .navbar { padding: 10px 0 !important; }
+  .navbar-brand { font-size: 28px !important; }
+  .logo-brand { width: 40px; }
+  .navbar-toggler { padding: 6px 10px; font-size: 18px; }
+  .nav-item { margin: 5px 0 !important; }
+  .navbar-nav { padding: 20px 0; text-align: center; }
+  .btn-call, .btn-outline-dark { width: 100%; margin: 5px 0 !important; padding: 10px 15px !important; }
+  .hero-section { padding: 80px 0; text-align: center; min-height: 70vh; }
+  .section-title { margin-top: 80px; font-size: 28px; }
+  
+  /* Формы на планшете */
+  .form-container { padding: 25px; }
+  .checkbox-group { padding: 12px; }
+  
+  /* Каталог на планшете */
+  .product-img { height: 180px; }
+  
+  /* Отзывы на планшете */
+  .testimonial-item { padding: 20px; margin: 0 40px; }
+  .carousel-control-prev { left: 10px; }
+  .carousel-control-next { right: 10px; }
+}
+
+/*   АДАПТИВНОСТЬ - Мобильные (768px и меньше)  */
+@media (max-width: 768px) {
+  body { font-size: 14px; }
+  h1 { font-size: 28px !important; line-height: 1.3; }
+  h2 { font-size: 24px !important; margin-bottom: 25px !important; }
+  h3 { font-size: 20px !important; }
+  h4 { font-size: 18px !important; }
+  h5 { font-size: 16px !important; }
+  h6 { font-size: 14px !important; }
+  
+  .section-title { margin-top: 70px !important; font-size: 22px; }
+  
+  /* Hero на мобильных */
+  .hero-section { padding: 70px 0 50px !important; min-height: 70vh; }
+  .hero-section h1 { font-size: 24px !important; }
+  .hero-section .lead { font-size: 14px !important; }
+  .hero-section .btn-outline { padding: 10px 20px; font-size: 14px; }
+  
+  /* Преимущества на мобильных */
+  #advantages .col-md-3 { margin-bottom: 30px; }
+  .advantage-icon { font-size: 40px; margin-bottom: 15px; }
+  
+  /* Каталог - переключаю на карусель */
+  .catalog-grid { display: none; }
+  .catalog-carousel { display: block; padding: 0 40px; }
+  .product-card { margin: 0 auto; max-width: 300px; }
+  .product-img { height: 200px; }
+  .carousel-indicators { margin-bottom: -30px; }
+  .carousel-control-prev { left: 5px; }
+  .carousel-control-next { right: 5px; }
+  
+  /* Прайс-лист - переключаю на карточки */
+  .table-responsive { display: none; }
+  .mobile-price-list { display: block; }
+  
+  /* Форма заказа на мобильных - ВСЁ КАК НА ДЕСКТОПЕ */
+  .form-container { 
+    padding: 20px 15px; 
+    margin: 0 5px;
+    border-radius: 8px;
+  }
+  .form-container .row { margin: 0; }
+  .form-container .col-md-6 { padding: 0 5px; }
+  .form-label { font-size: 13px; margin-bottom: 5px; }
+  .form-control, .form-select { font-size: 13px; padding: 8px 12px; }
+  .checkbox-group { padding: 12px 10px; margin-bottom: 15px; }
+  .checkbox-group h6 { font-size: 13px; margin-bottom: 8px; }
+  .form-check-label { font-size: 12px; }
+  .form-check { margin-bottom: 5px; }
+  textarea.form-control { font-size: 13px; }
+  
+  /* Отзывы на мобильных */
+  .testimonial-slider { padding: 0 30px; }
+  .testimonial-item { padding: 20px 15px; margin: 0 5px; }
+  .testimonial-img { width: 60px; height: 60px; }
+  .testimonial-text { font-size: 13px; line-height: 1.5; }
+  
+  /* Контакты на мобильных */
+  .contact-info li { flex-direction: column; }
+  .contact-info i { margin-bottom: 5px; }
+  .map-container { height: 250px; margin-top: 20px; }
+  
+  /* Футер на мобильных */
+  footer { padding: 40px 0 20px; text-align: center; }
+  footer .col-lg-4 { margin-bottom: 25px; }
+  
+  /* Модальные окна на мобильных */
+  .modal-dialog { margin: 10px; }
+  .modal-body { padding: 15px; }
+  .modal-title { font-size: 16px; }
+  .modal-body .form-label { font-size: 13px; }
+  .modal-body .form-control { font-size: 13px; padding: 8px 12px; }
+  
+  /* Кнопки на мобильных */
+  .btn { font-size: 13px; padding: 8px 18px; }
+  .btn-lg { font-size: 15px; padding: 10px 25px; }
+}
+
+/*   АДАПТИВНОСТЬ - Маленькие (576px и меньше)  */
+@media (max-width: 576px) {
+  h1 { font-size: 22px !important; }
+  h2 { font-size: 20px !important; }
+  .hero-section { min-height: 60vh; padding: 60px 0 40px !important; }
+  .hero-section h1 { font-size: 20px !important; }
+  .hero-section .lead { font-size: 13px !important; }
+  
+  /* Форма на очень маленьких */
+  .form-container { padding: 15px 10px; }
+  .form-container .col-md-6 { width: 100%; padding: 0; }
+  .checkbox-group { padding: 10px 8px; }
+  .form-check-label { font-size: 11px; }
+  
+  /* Каталог */
+  .product-card { max-width: 260px; }
+  .product-img { height: 160px; }
+  
+  /* Прайс-лист */
+  .price-card { padding: 12px; }
+  .price-card-title { font-size: 14px; }
+  .price-card-price { font-size: 16px; }
+  
+  /* Отзывы */
+  .testimonial-slider { padding: 0 20px; }
+  .testimonial-item { padding: 15px 10px; }
+  .testimonial-text { font-size: 12px; }
+  
+  /* Модальные окна */
+  .modal-dialog { margin: 5px; }
+  .modal-header { padding: 10px 15px; }
+  .modal-body { padding: 12px; }
+  
+  /* Кнопки */
+  .btn { font-size: 12px; padding: 6px 15px; }
+}
